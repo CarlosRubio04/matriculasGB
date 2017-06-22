@@ -42,9 +42,7 @@ curl_close($curl_handle);
 
 //echo "Reply: $query";
 
-$account="crubio@bmdigital.co";
-$password="charlie16";
-$to="carlosr@3dm.com.co";
+include("data.php");
 // if ($region == "Antioquia") {
 // 	$to="carlosblondsk8@gmail.com";
 // }elseif ($region == "Eje_Cafetero") {
