@@ -4,17 +4,10 @@ header('Access-Control-Allow-Methods: GET, POST');
 header("Access-Control-Allow-Headers: X-Requested-With");
 header('Content-Type: text/html; charset=utf-8');
 
-$empresa = $_POST['empresa'];
-$nombre  = $_POST['nombre'];
-$cargo  = $_POST['cargo'];
-$telefono  = $_POST['telefono'];
-$correo  = $_POST['correo'];
-$region  = $_POST['region'];
-$partnerId  = $_POST['partnerId'];
-$type  = $_POST['type'];
+$ = $_POST[''];
 
 if (empty($_POST['campaignId'])) {
-	$campaignId = "5";
+	$campaignId = "";
 }else {
 	$campaignId = $_POST['campaignId'];
 }
@@ -29,7 +22,7 @@ if (empty($_POST['type'])) {
 	$type  = $_POST['type'];
 }
 
-$url='http://ares.3dm.com.co/bobm/Views/WS/?campaignId='.urlencode($campaignId).'&partnerId='.urlencode($partnerId).'&type='.urlencode($type).'&empresa='.urlencode($empresa).'&nombre='.urlencode($nombre).'&cargo='.urlencode($cargo).'&telefono='.urlencode($telefono).'&correo='.urlencode($correo).'&region'.urlencode($region);
+$url='http://ares.3dm.com.co/bobm/Views/WS/?campaignId='.urlencode($campaignId).'&partnerId='.urlencode($partnerId).'&type='.urlencode($type).'&='.urlencode($);
 $curl_handle=curl_init();
 curl_setopt($curl_handle, CURLOPT_URL,$url);
 curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 30);
@@ -43,24 +36,19 @@ curl_close($curl_handle);
 //echo "Reply: $query";
 
 include("data.php");
-// if ($region == "Antioquia") {
-// 	$to="carlosblondsk8@gmail.com";
-// }elseif ($region == "Eje_Cafetero") {
-// 	$to="carlosrubioweb@yahoo.com";
-// }elseif ($region == "Oriente") {
-// 	$to="carlosr@3dm.com.co";
+// if ($region == "") {
+// 	$to="";
+// }elseif ($region == "") {
+// 	$to="";
+// }elseif ($region == "") {
+// 	$to="";
 // }
-$from="Javerianaenregion.com";
-$from_name="Unidad de formación empresarial";
+$from="";
+$from_name="";
 $msg="
-<p><b>Empresa:</b> $empresa</p>
-<p><b>Region:</b> $region</p>
-<p><b>Nombre:</b> $nombre</p>
-<p><b>Cargo:</b> $cargo</p>
-<p><b>Telefono:</b> $telefono</p>
-<p><b>Correo:</b> $correo</p>
+<p><b>:</b> $</p>
 "; // HTML message
-$subject="Nuevo mensaje de Javerianaenregion.com";
+$subject="";
 /*End Config*/
 
 include("phpmailer/class.phpmailer.php");

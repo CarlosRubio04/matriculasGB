@@ -1,0 +1,7 @@
+# for www.example.com/index.php?page=namepage
+RewriteCond %{THE_REQUEST} \?content=([^&\ ]+)($|\ )
+RewriteRule ^ /%1? [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)$ /index.php?content=$1 [L]

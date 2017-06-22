@@ -1,5 +1,5 @@
 <?
-$account="crubio@bmdigital.co";
-$password="charlie16";
-$to="carlosr@3dm.com.co";
+$account="xxxxx@xxx.com";
+$password="xxxxx";
+$to="xxxxx@xxx.com";
 ?>
