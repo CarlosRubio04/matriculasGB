@@ -1,7 +1,13 @@
+/*Estilos Generales*/
 * {
   padding: 0;
   margin: 0;
 }
+h1,h2,h3,h4,h5 {
+  margin: 0;
+}
+/*Estilos Generales*/
+
 /*Estilos del cargador al iniciarl la pagina*/
 .loader {
   width: 100vw;
@@ -30,3 +36,80 @@
  transform: scale(1);
 }
 /*Carga de las imagenes*/
+
+/*Estilo Header*/
+.header {
+  width: 100vw;
+  background-color: #eee;
+  max-height: 100px;
+}
+.header-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.header-nav-logo {
+  
+}
+/*Estilo Header*/
+
+/*Estilos Home Start*/
+.homeStart {
+  width: 100vw;
+  height: 80vh;
+  background-image: url(http://placehold.it/1400x1000);
+  background-position: center;
+  background-attachment: fixed;
+}
+.homeStart-cta {
+  background-color: #eee;
+  max-width: 70vh;
+  position: relative;
+  margin: 0 auto;
+  top: 70vh;
+}
+.homeStart-cta-header {
+  background-color: #fff;
+  padding: 10px;
+}
+.homeStart-cta-header h2 {
+  text-align: center;
+}
+.form-inline {
+  padding: 10px 0 10px 10px;
+}
+.form-inline .form-group {
+    width: 49%;
+    position: relative;
+    padding: 5px 6px;
+}
+.form-inline .form-group input {
+    width: 100%;
+    margin: 0 auto;
+}
+.form-control {
+  border-radius: 0;
+  border: 2px solid #ccc;
+  padding: 20px 10px;
+}
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+}
+.btn-sub {
+  width: 200px;
+  max-width: 100%;
+  margin: 10px auto;
+  display: block;
+  color: #fff;
+  background-color: red;
+}
+/*Estilos Home Start*/
