@@ -1,4 +1,4 @@
-// Cargar
+ // Cargar
 function cargar(){
   $('#loader').fadeIn();
 }
@@ -12,41 +12,28 @@ var bLazy = new Blazy({
 });
 
 // Gestos en Movil
-// var consulta = window.matchMedia('(max-width: 768px)');
-// consulta.addListener(mediaQuery);
+ var $cta = document.getElementById('cta');
+ var $cta2 = document.getElementById('cta2');
+ var $ctaAction = document.getElementById('ctaAction');
+ function toggleMenu(){
+   $ctaAction.classList.toggle('active')
+   $cta.classList.toggle('icon-close'); 
+ };
+ function showForm(){
+   $ctaAction.classList.add('active');
+ };
+ function hideForm(){
+   $ctaAction.classList.remove('active');
+ };
 
-// var $burguerButton = document.getElementById('burguer-button');
-// var $menu = document.getElementById('menu');
-// function toggleMenu(){
-//   $menu.classList.toggle('active')
-//   $burguerButton.classList.toggle('icon-close'); 
-// };
-// function showMenu(){
-//   $menu.classList.add('active');
-// };
-// function hideMenu(){
-//   $menu.classList.remove('active');
-// };
+$cta.addEventListener('touchstart', toggleMenu);
 
-// function mediaQuery() {
-//   if (consulta.matches) {
-//           // si se cumple hagamos esto
-//           console.log('se cumplió la condicion');
-//           $burguerButton.addEventListener('touchstart', toggleMenu);
-//         } else {
-//           $burguerButton.removeEventListener('touchstart', toggleMenu);
-//           // si no se cumple hagamos esto
-//           console.log('no se cumplió la condicion');
-//         }
-//       }
-// mediaQuery();
-// // Gestos touch
-// var $body = document.body;
+  //Gestos touch
+ var $body = document.body;
 
-// var gestos = new Hammer($body);
-// gestos.on('swipeleft', hideMenu);
-// gestos.on('swiperight', showMenu);
-// Gestos en Movil
+ var gestos = new Hammer($body);
+ gestos.on('swipeleft', hideForm);
+ gestos.on('swiperight', showForm);
 
 // Bx Slider
 $(document).ready(function(){
