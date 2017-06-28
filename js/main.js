@@ -85,6 +85,7 @@ $('#formularioUno').validate(  {
       },
       error: function() {
         $('form').fadeTo( "slow", 0.15, function() {
+          console.log(data);
           $('.errorMsj').fadeIn();
         });
       }
@@ -154,6 +155,7 @@ $('#formularioDos').validate(  {
       },
       error: function() {
         $('form').fadeTo( "slow", 0.15, function() {
+          console.log(data);
           $('.errorMsj').fadeIn();
         });
       }

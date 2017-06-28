@@ -26,28 +26,28 @@
 				<ul class="bxslider">
 					<li>
 						<div class="embed-responsive embed-responsive-16by9">
-							<video width="100%" height="auto" controls>
+							<video class="lazyImg" width="100%" height="auto" controls>
 							  <source src="videos/extra.mp4" type="video/mp4">
 							</video>
 						</div>
 					</li>
 					<li>
 						<div class="embed-responsive embed-responsive-16by9">
-							<video width="100%" height="auto" controls>
+							<video class="lazyImg" width="100%" height="auto" controls>
 							  <source src="videos/academico.mp4" type="video/mp4">
 							</video>
 						</div>
 					</li>
 					<li>
 						<div class="embed-responsive embed-responsive-16by9">
-							<video width="100%" height="auto" controls>
+							<video class="lazyImg" width="100%" height="auto" controls>
 							  <source src="videos/bienestar.mp4" type="video/mp4">
 							</video>
 						</div>
 					</li>
 					<li>
 						<div class="embed-responsive embed-responsive-16by9">
-							<video width="100%" height="auto" controls>
+							<video class="lazyImg" width="100%" height="auto" controls>
 							  <source src="videos/infra.mp4" type="video/mp4">
 							</video>
 						</div>
@@ -77,7 +77,7 @@
 					<img src="img/tri_img.png" data-src="img/tri_img.png | img/tri_img.png@2x.png" alt="Trilinguismo" class="lazyImg">
 				</div>
 				<figcaption>
-					<h4>Trilinguismo</h4>
+					<h4>Trilingüismo</h4>
 				</figcaption>
 			</figure>
 		</div>
