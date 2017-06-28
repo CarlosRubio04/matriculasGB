@@ -24,28 +24,28 @@
 					<li>
 						<div class="embed-responsive embed-responsive-16by9">
 							<video class="lazyImg" width="100%" height="auto" controls>
-							  <source src="videos/extra.mp4" type="video/mp4">
+							  <source src="videos/extra.min.mp4" type="video/mp4">
 							</video>
 						</div>
 					</li>
 					<li>
 						<div class="embed-responsive embed-responsive-16by9">
 							<video class="lazyImg" width="100%" height="auto" controls>
-							  <source src="videos/academico.mp4" type="video/mp4">
+							  <source src="videos/academico.min.mp4" type="video/mp4">
 							</video>
 						</div>
 					</li>
 					<li>
 						<div class="embed-responsive embed-responsive-16by9">
 							<video class="lazyImg" width="100%" height="auto" controls>
-							  <source src="videos/bienestar.mp4" type="video/mp4">
+							  <source src="videos/bienestar.min.mp4" type="video/mp4">
 							</video>
 						</div>
 					</li>
 					<li>
 						<div class="embed-responsive embed-responsive-16by9">
 							<video class="lazyImg" width="100%" height="auto" controls>
-							  <source src="videos/infra.mp4" type="video/mp4">
+							  <source src="videos/infra.min.mp4" type="video/mp4">
 							</video>
 						</div>
 					</li>
