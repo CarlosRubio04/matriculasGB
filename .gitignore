@@ -1,1 +1,2 @@
-includes/
+#excluir archivos con clave
+includes/*.php
