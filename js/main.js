@@ -1,5 +1,5 @@
  // Cargar
-function cargar(){
+ function cargar(){
   $('#loader').fadeIn();
 }
 // Descargar
@@ -75,22 +75,31 @@ $('#formularioUno').validate(  {
     }
 
   },
-  submitHandler: function(form) {
-    $(form).ajaxSubmit({
-      type:"POST",
-      data: $(form).serialize(),
-      url:"includes/validation.php",
-      success: function() {
-        window.location.href = "?content=gracias";
-      },
-      error: function() {
-        $('form').fadeTo( "slow", 0.15, function() {
-          console.log(data);
-          $('.errorMsj').fadeIn();
-        });
-      }
-    });
+  submitHandler: function(form){
+    cargar();
+    $.post('includes/validation.php',$('#formularioUno').serialize())
+    .done(function(data){
+      $('.form-control').val('');
+      descargar();
+      bootbox.alert(data, function() {console.log("Alert Callback");});
+      //window.location.href = "?content=gracias";
+    })
   }
+  // submitHandler: function(form) {
+  //   $(form).ajaxSubmit({
+  //     type:"POST",
+  //     data: $(form).serialize(),
+  //     url:"includes/validation.php",
+  //     success: function() {
+  //       window.location.href = "?content=gracias";
+  //     },
+  //     error: function() {
+  //       $('form').fadeTo( "slow", 0.15, function() {
+  //         $('.errorMsj').fadeIn();
+  //       });
+  //     }
+  //   });
+  // }
 
 });
 // Validacion del formulario 1
@@ -155,7 +164,6 @@ $('#formularioDos').validate(  {
       },
       error: function() {
         $('form').fadeTo( "slow", 0.15, function() {
-          console.log(data);
           $('.errorMsj').fadeIn();
         });
       }

@@ -27,7 +27,7 @@ if (empty($_POST['type'])) {
 	$type  = $_POST['type'];
 }
 
-$url='http://ares.3dm.com.co/bobm/Views/WS/?campaignId='.urlencode($campaignId).'&partnerId='.urlencode($partnerId).'&type='.urlencode($type).'&padre='.urlencode($nombrePadre).'&alumno='.urlencode($nombreAlumno).'&edad_alumno='.urlencode($edadAlumno).'&curso='.urlencode($curso).'&telefono'.urlencode($telefono).'&email='.urlencode($email);
+$url='http://ares.3dm.com.co/bobm/Views/WS/?campaignId='.urlencode($campaignId).'&partnerId='.urlencode($partnerId).'&type='.urlencode($type).'&padre='.urlencode($nombrePadre).'&alumno='.urlencode($nombreAlumno).'&edad_alumno='.urlencode($edadAlumno).'&curso='.urlencode($curso).'&telefono='.urlencode($telefono).'&email='.urlencode($email);
 $curl_handle=curl_init();
 curl_setopt($curl_handle, CURLOPT_URL,$url);
 curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 30);
@@ -36,9 +36,8 @@ curl_setopt($curl_handle, CURLOPT_USERAGENT, 'Title');
 $query = curl_exec($curl_handle);
 curl_close($curl_handle);
 
-//echo "Query:n$url n";
-
-//echo "Reply: $query";
+echo "Query:n$url n";
+echo "Reply: $query";
 
 include("data.php");
 $from="gimnasiobritanicoadmisiones.com";
