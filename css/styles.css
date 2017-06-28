@@ -90,7 +90,7 @@ ul li {
 }
 .homeStart-cta {
   background-color: #f9f9f9;
-  max-width: 70vh;
+  max-width: 50vw;
   position: relative;
   margin: 0 auto;
   top: 60vh;
@@ -162,7 +162,7 @@ ul li {
 /*Estilos aboutUs*/
 .aboutUs {
   width: 100vw;
-  margin-top: 200px;
+  margin-top: 250px;
 }
 .aboutUsTitle {
   color: #102167;
@@ -182,10 +182,9 @@ ul li {
   flex-wrap: wrap;
 }
 .featuresThumb {
-  max-width: 100%;
-  width: 200px;
+  width: 190px;
   max-width: 200px;
-  margin: 0 10px;
+  margin: 0 6px;
 }
 .featuresThumb figure{
   background-color: #eef0f6;
@@ -223,7 +222,7 @@ ul li {
   padding-top: 40px;
 }
 .sertificationsFlex figure {
-  width: 300px;
+  width: 260px;
   max-width: 300px;
   height: 200px;
   max-height: 200px;
@@ -339,11 +338,63 @@ footer p {
 
 /*Celulare large*/
 @media screen and (max-width: 767px) {
-
+  /*Header*/
+  .header-nav-name {
+    font-size: 30px;
+  }
+  /*HOME*/
+  .homeStart {
+    height: auto;
+    background-size: 100%;
+    background-position: top;
+  }
+  .homeStart-cta {
+    width: 100vw;
+    max-width: 100vw;
+    display: block;
+    top: 30vh;
+  }
+  .homeStart-cta-header h2 {
+    font-size: 18px;
+  }
+  .form-inline .form-group {
+    width: 100%;
+  }
+  .form-inline {
+    padding: 10px;
+  }
+  /*Features*/
+  .sertificationsFlex figure {
+    width: 200px;
+    max-width: 48%;
+  }
+  /*Footer*/
+  footer {
+    padding: 5px;
+  }
+  .row-flex {
+    flex-direction: column;
+  }
+  .row-flex  p {
+    font-size: 10px;
+  }
+  .col-md-6-flex {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .col-md-6-flex p {
+    display: none;
+  }
+  .footer-tittle {
+    font-size: 20px;
+  }
 }
 /*Celulares medium*/
 @media screen and (max-width: 650px) {
-
+  .sertificationsFlex figure {
+    width: 200px;
+    max-width: 48%;
+  }
 }
 
 /*Celulares small*/
