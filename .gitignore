@@ -1,2 +1,2 @@
 #excluir archivos con clave
-includes/data
+includes/*.php
