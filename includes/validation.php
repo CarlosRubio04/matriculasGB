@@ -74,6 +74,6 @@ $mail->addAddress($to);
 if(!$mail->send()){
  echo "Mailer Error: " . $mail->ErrorInfo;
 }else{
- echo "Estamos Validando tu Información $nombre";
+ echo "Estamos Validando tu Información";
 }
 ?>

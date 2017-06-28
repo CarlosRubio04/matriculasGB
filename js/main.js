@@ -13,7 +13,6 @@ var bLazy = new Blazy({
 
 // Bx Slider
 $(document).ready(function(){
-  $('.errorMsj').fadeOut();
   descargar();
   $('.bxslider').bxSlider({
     minSlides: 1,
@@ -81,26 +80,10 @@ $('#formularioUno').validate(  {
     .done(function(data){
       $('.form-control').val('');
       descargar();
-      bootbox.alert(data, function() {console.log("Alert Callback");});
-      //window.location.href = "?content=gracias";
+      //bootbox.alert(data, function() {console.log("Alert Callback");});
+      window.location.href = "?content=gracias";
     })
   }
-  // submitHandler: function(form) {
-  //   $(form).ajaxSubmit({
-  //     type:"POST",
-  //     data: $(form).serialize(),
-  //     url:"includes/validation.php",
-  //     success: function() {
-  //       window.location.href = "?content=gracias";
-  //     },
-  //     error: function() {
-  //       $('form').fadeTo( "slow", 0.15, function() {
-  //         $('.errorMsj').fadeIn();
-  //       });
-  //     }
-  //   });
-  // }
-
 });
 // Validacion del formulario 1
 $('#formularioDos').validate(  {
@@ -154,20 +137,15 @@ $('#formularioDos').validate(  {
     }
 
   },
-  submitHandler: function(form) {
-    $(form).ajaxSubmit({
-      type:"POST",
-      data: $(form).serialize(),
-      url:"includes/validation.php",
-      success: function() {
-        window.location.href = "/gracias";
-      },
-      error: function() {
-        $('form').fadeTo( "slow", 0.15, function() {
-          $('.errorMsj').fadeIn();
-        });
-      }
-    });
+  submitHandler: function(form){
+    cargar();
+    $.post('includes/validation.php',$('#formularioDos').serialize())
+    .done(function(data){
+      $('.form-control').val('');
+      descargar();
+      //bootbox.alert(data, function() {console.log("Alert Callback");});
+      window.location.href = "?content=gracias";
+    })
   }
 
 });
