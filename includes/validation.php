@@ -7,7 +7,7 @@ header('Content-Type: text/html; charset=utf-8');
 $ = $_POST[''];
 
 if (empty($_POST['campaignId'])) {
-	$campaignId = "6";
+	$campaignId = "";
 }else {
 	$campaignId = $_POST['campaignId'];
 }
