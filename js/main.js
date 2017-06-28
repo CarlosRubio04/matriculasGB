@@ -11,45 +11,25 @@ var bLazy = new Blazy({
   selector: '.lazyImg' // all images
 });
 
-// Gestos en Movil
- var $cta = document.getElementById('cta');
- var $cta2 = document.getElementById('cta2');
- var $ctaAction = document.getElementById('ctaAction');
- function toggleMenu(){
-   $ctaAction.classList.toggle('active')
-   $cta.classList.toggle('icon-close'); 
- };
- function showForm(){
-   $ctaAction.classList.add('active');
- };
- function hideForm(){
-   $ctaAction.classList.remove('active');
- };
-
-$cta.addEventListener('touchstart', toggleMenu);
-
-  //Gestos touch
- var $body = document.body;
-
- var gestos = new Hammer($body);
- gestos.on('swipeleft', hideForm);
- gestos.on('swiperight', showForm);
-
 // Bx Slider
 $(document).ready(function(){
   descargar();
   $('.bxslider').bxSlider({
     minSlides: 1,
     maxSlides: 4,
-    slideWidth: 370,
-    slideMargin: 15
+    pager: false,
+    useCSS: false
   });
 });
 
-// Validacion del formulario
-$('form').validate(  {
+// Validacion del formulario 1
+$('#formularioUno').validate(  {
   rules: {
-    nombre: {
+    nombrePadre: {
+      required: true,
+      minlength: 5
+    },
+    nombrePadre: {
       required: true,
       minlength: 5
     },
@@ -57,47 +37,108 @@ $('form').validate(  {
       required: true,
       minlength: 7
     },
-    correo: {
+    email: {
       email: true,
       required: true,
 
     },
-    empresa: {
+    edadAlumno: {
       required: true,
     },
-    sector: {
-      required: true,
-    },
-    empleados: {
-      required: true,
-    },
-    cargo: {
+    curso: {
       required: true,
     }
   },
   messages: {
-    nombre: {
+    nombrePadre: {
       required: "Por favor escribe tu nombre",
+      minlength: "Tu nombre es demasiado corto"
+    },
+    nombreAlumno: {
+      required: "Por favor escribe el nombre del alumno",
       minlength: "Tu nombre es demasiado corto"
     },
     telefono: {
       required: "Por favor escribe tu teléfono",
       minlength: "Tu teléfono es demasiado corto"
     },
-    correo: {
+    email: {
       required: "Por favor escribe tu E-mail",
       minlength: "Escribe un E-mail valido"
     },
-    empresa: {
+    edadAlumno: {
       required: "Por favor completa este campo",
     },
-    sector: {
-      required: "Por favor selecciona un opsión",
+    curso: {
+      required: "Por favor completa este campo",
+    }
+
+  },
+  submitHandler: function(form) {
+    $(form).ajaxSubmit({
+      type:"POST",
+      data: $(form).serialize(),
+      url:"includes/validation.php",
+      success: function() {
+        window.location.href = "/gracias";
+      },
+      error: function() {
+        $('form').fadeTo( "slow", 0.15, function() {
+          $('#error').fadeIn();
+        });
+      }
+    });
+  }
+
+});
+// Validacion del formulario 1
+$('#formularioDos').validate(  {
+  rules: {
+    nombrePadre: {
+      required: true,
+      minlength: 5
     },
-    empleados: {
+    nombrePadre: {
+      required: true,
+      minlength: 5
+    },
+    telefono: {
+      required: true,
+      minlength: 7
+    },
+    email: {
+      email: true,
+      required: true,
+
+    },
+    edadAlumno: {
+      required: true,
+    },
+    curso: {
+      required: true,
+    }
+  },
+  messages: {
+    nombrePadre: {
+      required: "Por favor escribe tu nombre",
+      minlength: "Tu nombre es demasiado corto"
+    },
+    nombreAlumno: {
+      required: "Por favor escribe el nombre del alumno",
+      minlength: "Tu nombre es demasiado corto"
+    },
+    telefono: {
+      required: "Por favor escribe tu teléfono",
+      minlength: "Tu teléfono es demasiado corto"
+    },
+    email: {
+      required: "Por favor escribe tu E-mail",
+      minlength: "Escribe un E-mail valido"
+    },
+    edadAlumno: {
       required: "Por favor completa este campo",
     },
-    cargo: {
+    curso: {
       required: "Por favor completa este campo",
     }
 

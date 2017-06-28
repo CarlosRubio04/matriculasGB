@@ -150,10 +150,12 @@ ul li {
   -o-transition: background-color 500ms ease-out;
   transition: background-color 500ms ease-out;
 }
-.btn-sub:hover {
+.btn-sub:hover, .btn-sub:focus, .btn-sub:active {
   background-color: transparent;
   border: 2px solid #cf002f;
   color: #cf002f;
+  outline: 0;
+  outline-offset: 0;
 }
 /*Estilos Home Start*/
 

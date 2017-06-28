@@ -1,4 +1,4 @@
-<form class="form-inline">
+<form class="form-inline" id="formularioUno">
 	<div class="form-group">
 		<input type="text" class="form-control" name="nombrePadre" id="nombrePadre" placeholder="Nombre del padre" required/>
 	</div>

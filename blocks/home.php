@@ -2,7 +2,7 @@
 <section class="homeStart">
 	<div class="homeStart-cta">
 		<div class="homeStart-cta-header">
-			<h2>Conoce nuestras instalaciónes. Agenda tu cita!</h2>
+			<h2>Conoce nuestras instalaciónes. ¡Agenda tu cita!</h2>
 		</div>
 		<?php include('blocks/formulario.php'); ?>
 	</div>
@@ -15,16 +15,41 @@
 			<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 				<h2 class="aboutUsTitle">Nosotros</h2>
 				<article>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, corporis animi deserunt magnam accusantium repellendus debitis, libero veniam dolorum ex placeat culpa, doloremque! Exercitationem possimus reiciendis doloremque eum saepe ullam. <br>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam possimus et minus saepe vel cum sequi doloribus dignissimos ea incidunt sunt unde, quos, reiciendis, accusantium nam molestias labore reprehenderit qui.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, corporis animi deserunt magnam accusantium repellendus debitis, libero veniam dolorum ex placeat culpa, doloremque! Exercitationem possimus reiciendis doloremque eum saepe ullam.
+					<p>Somos una comunidad de educadores que cree que la educación es fundamental en el desarrollo humano. Nuestros docentes y personal están dedicados a mantener los estándares más altos en desempeño escolar, deportivo y artístico, sembrando valores, sentido de responsabilidad y respeto hacia los demás.
 					</p>
 				</article>
 			</div>
 			<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe width="100%" height="auto" class="b-lazy"  src="https://www.youtube.com/embed/1A2EZl1q3cw" frameborder="0" allowfullscreen></iframe>
-				</div>
+				<ul class="bxslider">
+					<li>
+						<div class="embed-responsive embed-responsive-16by9">
+							<video width="100%" height="auto" controls>
+							  <source src="videos/extra.mp4" type="video/mp4">
+							</video>
+						</div>
+					</li>
+					<li>
+						<div class="embed-responsive embed-responsive-16by9">
+							<video width="100%" height="auto" controls>
+							  <source src="videos/academico.mp4" type="video/mp4">
+							</video>
+						</div>
+					</li>
+					<li>
+						<div class="embed-responsive embed-responsive-16by9">
+							<video width="100%" height="auto" controls>
+							  <source src="videos/bienestar.mp4" type="video/mp4">
+							</video>
+						</div>
+					</li>
+					<li>
+						<div class="embed-responsive embed-responsive-16by9">
+							<video width="100%" height="auto" controls>
+							  <source src="videos/infra.mp4" type="video/mp4">
+							</video>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -38,8 +63,7 @@
 					<img src="img/id_img.png" data-src="img/id_img.png | img/id_img.png@2x.png" alt="ID" class="lazyImg">
 				</div>
 				<figcaption>
-					<h4>ID</h4>
-					<p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin,</p>
+					<h4>Bachillerato Internacional® (IB)</h4>
 				</figcaption>
 			</figure>
 		</div>
@@ -51,7 +75,6 @@
 				</div>
 				<figcaption>
 					<h4>Trilinguismo</h4>
-					<p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin,</p>
 				</figcaption>
 			</figure>
 		</div>
@@ -63,7 +86,6 @@
 				</div>
 				<figcaption>
 					<h4>Instalaciones</h4>
-					<p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin,</p>
 				</figcaption>
 			</figure>
 		</div>
@@ -75,7 +97,6 @@
 				</div>
 				<figcaption>
 					<h4>Controles médicos y ontológicos</h4>
-					<p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin,</p>
 				</figcaption>
 			</figure>
 		</div>
@@ -87,7 +108,6 @@
 				</div>
 				<figcaption>
 					<h4>Enfoque en deporte y cultura</h4>
-					<p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin,</p>
 				</figcaption>
 			</figure>
 		</div>
@@ -98,12 +118,11 @@
 				</div>
 				<figcaption>
 					<h4>Transporte propio</h4>
-					<p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin,</p>
 				</figcaption>
 			</figure>
 		</div>
 	</div>
-	<button class="btn btn-sub" id="cta">Más Información</button>
+	<button type="button" class="btn btn-sub" data-toggle="modal" data-target="#cta">Más Información</button>
 </section>
 
 <!-- Ubicarion -->
@@ -130,7 +149,7 @@
 						</ul>
 					</p>
 				</article>
-				<button class="btn btn-sub" id="cta2">Agenda tu cita</button>
+				<button type="button" class="btn btn-sub" data-toggle="modal" data-target="#cta">Agenda tu cita</button>
 			</div>
 		</div>
 	</div>
