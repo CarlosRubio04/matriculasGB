@@ -1,5 +1,5 @@
 <?
 $account="crubio@bmdigital.co";
-$password="charlie16";
+$password="";
 $to="admisiones@gimnasio-britanico.edu.co";
 ?>
