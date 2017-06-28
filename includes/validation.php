@@ -4,10 +4,15 @@ header('Access-Control-Allow-Methods: GET, POST');
 header("Access-Control-Allow-Headers: X-Requested-With");
 header('Content-Type: text/html; charset=utf-8');
 
-$ = $_POST[''];
+$nombrePadre = $_POST['nombrePadre'];
+$nombreAlumno = $_POST['nombreAlumno'];
+$edadAlumno = $_POST['edadAlumno'];
+$curso = $_POST['curso'];
+$telefono = $_POST['telefono'];
+$email = $_POST['email'];
 
 if (empty($_POST['campaignId'])) {
-	$campaignId = "";
+	$campaignId = "6";
 }else {
 	$campaignId = $_POST['campaignId'];
 }
@@ -36,19 +41,19 @@ curl_close($curl_handle);
 //echo "Reply: $query";
 
 include("data.php");
-// if ($region == "") {
-// 	$to="";
-// }elseif ($region == "") {
-// 	$to="";
-// }elseif ($region == "") {
-// 	$to="";
-// }
-$from="";
-$from_name="";
+$from="gimnasiobritanicoadmisiones.com";
+$from_name="Gimnasio Britanico Admisiones";
 $msg="
-<p><b>:</b> $</p>
+<p><b>Nombre del Padre:</b> $nombrePadre</p>
+<p><b>Nombre del Alumno:</b> $nombreAlumno</p>
+<p><b>Edad del Alumno:</b> $edadAlumno</p>
+<p><b>Curso:</b> $curso</p>
+<p><b>Teléfono:</b> $telefono</p>
+<p><b>E-mail:</b> $email</p>
+
+
 "; // HTML message
-$subject="";
+$subject="Nuevo mensaje desde gimnasiobritanicoadmisiones.com";
 /*End Config*/
 
 include("phpmailer/class.phpmailer.php");

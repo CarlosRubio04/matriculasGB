@@ -13,6 +13,7 @@ var bLazy = new Blazy({
 
 // Bx Slider
 $(document).ready(function(){
+  $('.errorMsj').fadeOut();
   descargar();
   $('.bxslider').bxSlider({
     minSlides: 1,
@@ -84,7 +85,7 @@ $('#formularioUno').validate(  {
       },
       error: function() {
         $('form').fadeTo( "slow", 0.15, function() {
-          $('#error').fadeIn();
+          $('.errorMsj').fadeIn();
         });
       }
     });
@@ -153,7 +154,7 @@ $('#formularioDos').validate(  {
       },
       error: function() {
         $('form').fadeTo( "slow", 0.15, function() {
-          $('#error').fadeIn();
+          $('.errorMsj').fadeIn();
         });
       }
     });

@@ -5,6 +5,9 @@
 			<h2>Conoce nuestras instalaciónes. ¡Agenda tu cita!</h2>
 		</div>
 		<?php include('blocks/formulario.php'); ?>
+		<div class="errorMsj">
+			<p class="text-center">Ha Ocurrido un error</p>
+		</div>
 	</div>
 </section>
 
