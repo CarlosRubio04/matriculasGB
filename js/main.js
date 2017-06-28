@@ -80,7 +80,7 @@ $('#formularioUno').validate(  {
       data: $(form).serialize(),
       url:"includes/validation.php",
       success: function() {
-        window.location.href = "/gracias";
+        window.location.href = "?content=gracias";
       },
       error: function() {
         $('form').fadeTo( "slow", 0.15, function() {
