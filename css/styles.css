@@ -328,6 +328,10 @@ footer p {
 .ctaAction form .form-group {
   width: 100%;
 }
+
+.bx-wrapper .bx-controls-direction a {
+  z-index: 1 !important;
+}
 /*Tablets*/
 @media screen and (max-width: 800px) {
 
