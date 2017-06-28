@@ -33,6 +33,8 @@
 					<div class="form-group">
 						<input type="email" class="form-control" name="email" id="email" placeholder="Email de contacto" required/>
 					</div>
+					<input type="hidden" name="partnerId" value="<?php echo $partnerId ?>">
+					<input type="hidden" name="type" value="<?php echo $type ?>">
 					<button type="submit" class="btn btn-sub">Contáctanos</button>
 				</form>
 			</div>
